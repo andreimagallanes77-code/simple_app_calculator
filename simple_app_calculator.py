@@ -23,3 +23,22 @@ def main():
 
             number_one = float(input("Enter first number: "))
             number_two = float(input("Enter second number: "))
+
+            if choice == 1:
+                result = add(number_one, number_two)
+                print("Result:", result)
+
+            elif choice == 2:
+                result = subtract(number_one, number_two)
+                print("Result:", result)
+
+            elif choice == 3:
+                result = multiply(number_one, number_two)
+                print("Result:", result)
+
+            elif choice ==  4:
+                result = divide(number_one, number_two)
+                print("Result:", result)
+
+            else:
+                print("Invalid choice!")
