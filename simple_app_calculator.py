@@ -42,3 +42,17 @@ def main():
 
             else:
                 print("Invalid choice!")
+
+        except ValueError:
+            print(RED + "Invalid input! Please enter numbers only." + RESET)
+
+        except ZeroDivisionError:
+            print(RED + "Error! Cannot divide by zero." + RESET)
+
+        again = input("\nDo you want to try again? (y/n): ")
+
+        if again.lower() == "n":
+            print(GREEN + "Thank you!" + RESET)
+            break
+
+    main()
