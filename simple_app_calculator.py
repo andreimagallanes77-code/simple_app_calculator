@@ -1,3 +1,9 @@
+# COLORS
+RED = "\033[31m"
+GREEN = "\033[32m"
+YELLOW = "\033[33m"
+RESET = "\033[0m"
+
 def add(number_one, number_two):
     return number_one + number_two
 
@@ -13,7 +19,7 @@ def divide(number_one, number_two):
 def main():
     while True:
         try:
-            print("\nChoose operation:")
+            print(YELLOW + "\nChoose operation:" + RESET)
             print("1. Addition")
             print("2. Subtraction")
             print("3. Multiplication")
@@ -26,22 +32,22 @@ def main():
 
             if choice == "1":
                 result = add(number_one, number_two)
-                print("Result:", result)
+                print(GREEN + "Result: " + str(result) + RESET)
 
             elif choice == "2":
                 result = subtract(number_one, number_two)
-                print("Result:", result)
+                print(GREEN + "Result: " + str(result) + RESET)
 
             elif choice == "3":
                 result = multiply(number_one, number_two)
-                print("Result:", result)
+                print(GREEN + "Result: " + str(result) + RESET)
 
             elif choice == "4":
                 result = divide(number_one, number_two)
-                print("Result:", result)
+                print(GREEN + "Result: " + str(result) + RESET)
 
             else:
-                print("Invalid choice!")
+                print(RED + "Invalid choice!" + RESET)
 
         except ValueError:
             print(RED + "Invalid input! Please enter numbers only." + RESET)
@@ -55,4 +61,4 @@ def main():
             print(GREEN + "Thank you!" + RESET)
             break
 
-    main()
+main()
